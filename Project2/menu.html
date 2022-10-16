@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>메뉴 선택</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <!-- 부트스트랩 CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- fontawesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <!-- 헤더 -->
+    <div data-include-path="header.html"></div>
+    <!-- 메뉴 -->
+    <div class="menu-allbox">
+
+        <!-- 메뉴 세부선택 : 모달창 -->
+        <div class="modal menu-modalbox" id="menu-modalbox" tabindex="-1">
+            <div class="modal-dialog">
+                <form action="">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">세부 선택</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <!-- 모달 내용 -->
+                    <div class="modal-body m-selbox">
+                        <fieldset>
+                        <ul class="m-sel-ul">
+                            <li>
+                                <label for="lg-set">
+                                    <input type="radio" class="sel-radio" id="lg-set" name="set-sel" value="">
+                                    <strong>라지세트</strong>
+                                    <span style="float:right" id="lg-set-price"></span>
+                                    <img src="image/set/lg.JPG" alt="">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="m-set">
+                                    <input type="radio" class="sel-radio" name="set-sel" id="m-set">
+                                    <strong>세트</strong>
+                                    <span style="float:right" id="m-set-price"></span>
+                                    <img src="image/set/lg.JPG" alt="">
+                                </label>
+                            </li>
+                            <li>
+                                <label for="no-set">
+                                    <input type="radio" class="sel-radio" name="set-sel" id="no-set">
+                                    <strong>단품</strong>
+                                    <span style="float:right" id="no-set-price"></span>
+                                    <img src="image/bugur/McCrispy_Delux.JPG" alt="">
+                                </label>
+                            </li>
+                        </ul>
+                    </fieldset>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">취소하기</button>
+                        <button type="button" class="btn btn-warning" onclick="menuSel()">선택하기</button>
+                    </div>
+                    
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+        <div class="menu-header">
+            <h2>메뉴</h2>
+            <div class="menu-item">
+                <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                    <li class="m-li nav-item" role="presentation">
+                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home" aria-selected="true">버거&세트</button>
+                    </li>
+                    <li class="m-li nav-item" role="presentation">
+                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile" aria-selected="false">스낵&사이드</button>
+                    </li>
+                    <li class="m-li nav-item" role="presentation">
+                        <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill" data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact" aria-selected="false">음료</button>
+                    </li>
+                    <li class="m-li nav-item" role="presentation">
+                        <button class="nav-link" id="pills-disabled-tab" data-bs-toggle="pill" data-bs-target="#pills-disabled" type="button" role="tab" aria-controls="pills-disabled" aria-selected="false">해피밀</button>
+                    </li>
+                </ul>
+            </div>
+
+
+        </div>
+        <!-- 버거 메뉴 -->
+        <div class="tab-content" id="pills-tabContent">
+        <div class="burger-menu tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab" tabindex="0">
+            <ul class="m-List">
+                <li>
+                    <!-- data-bs-toggle="modal"  -->
+                    <a id='burger1' class="m-a">
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/bugur/McCrispy_Delux.JPG" alt="맥 크리스피 디럭스 버거">
+                        </div>
+                        <div class="m-name">
+                            <strong>맥 크리스피 디럭스 버거</strong>
+                            <p>7500~</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='burger2' class="m-a">
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/bugur/Bic_Mac.JPG" alt="">
+                        </div>
+                        <div class="m-name">
+                            <strong>빅맥</strong>
+                            <p>5700~</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='burger3' class="m-a"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/bugur/McSpicy_ShanghaiBurger.JPG" alt="">
+                        </div>
+                        <div class="m-name">
+                            <strong>맥 스파이시 상하이 버거</strong>
+                            <p>5700~</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='burger4' class="m-a"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/bugur/1955.JPG" alt="">
+                        </div>
+                        <div class="m-name">
+                            <strong>1955 버거</strong>
+                            <p>7500~</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='burger5' class="m-a"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/bugur/Double_Bulgogi_Burger.JPG" alt="">
+                        </div>
+                        <div class="m-name">
+                            <strong>더블 불고기 버거</strong>
+                            <p>5500~</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+
+    <!-- 스낵&사이드 -->
+    <div class="burger-menu tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+        <ul class="m-List">
+            <li>
+                <!-- data-bs-toggle="modal"  -->
+                <a id="side1" class="m-b">
+                    <div class="m-img">
+                        <!-- 이미지 -->
+                        <img src="image/side/French_Fries.JPG" alt="후렌치 후라이">
+                    </div>
+                    <div class="m-name">
+                        <strong>후렌치 후라이</strong>
+                        <p>₩2600</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id='side2' class="m-b">
+                    <div class="m-img">
+                        <!-- 이미지 -->
+                        <img src="image/side/Golden_Mozzarella_Cheese_Sticks.JPG" alt="">
+                    </div>
+                    <div class="m-name">
+                        <strong>골든 모짜렐라 치즈 스틱</strong>
+                        <p> ₩ 3,300</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id='side3' class="m-b"> 
+                    <div class="m-img">
+                        <!-- 이미지 -->
+                        <img src="image/side/McNuggets.JPG" alt="">
+                    </div>
+                    <div class="m-name">
+                        <strong>맥너겟</strong>
+                        <p>₩3000</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id='side4' class="m-b"> 
+                    <div class="m-img">
+                        <!-- 이미지 -->
+                        <img src="image/side/Shanghai_Chicken_Snack_Wrap.JPG" alt="">
+                    </div>
+                    <div class="m-name">
+                        <strong>상하이 치킨 스낵랩</strong>
+                        <p>₩3200</p>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a id='side5' class="m-b"> 
+                    <div class="m-img">
+                        <!-- 이미지 -->
+                        <img src="image/side/Coleslaw.JPG" alt="">
+                    </div>
+                    <div class="m-name">
+                        <strong>코울슬로</strong>
+                        <p>₩2700</p>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+        <!-- 음료 -->
+        <div class="burger-menu tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab" tabindex="0">
+            <ul class="m-List">
+                <li>
+                    <!-- data-bs-toggle="modal"  -->
+                    <a id="drink1" class="m-b">
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/drink/Coca-Cola.JPG" alt="콜라">
+                        </div>
+                        <div class="m-name">
+                            <strong>콜라</strong>
+                            <p>₩2200</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id="drink2" class="m-b">
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/drink/Iced_Americano.JPG" alt="아이스 아메리카노">
+                        </div>
+                        <div class="m-name">
+                            <strong>아이스 아메리카노</strong>
+                            <p> ₩ 3200</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='drink3' class="m-b"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/drink/Iced_Cafe_Latte.JPG" alt="카페라떼">
+                        </div>
+                        <div class="m-name">
+                            <strong>카페라떼</strong>
+                            <p>₩3700</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='drink4' class="m-b"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/drink/Jeju_Hallabong_Chiller.JPG" alt="제주 한라봉 칠러">
+                        </div>
+                        <div class="m-name">
+                            <strong>제주 한라봉 칠러</strong>
+                            <p>₩3700</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='drink5' class="m-b"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/drink/Vanilla_Latte.JPG" alt="바닐라 라떼">
+                        </div>
+                        <div class="m-name">
+                            <strong>바닐라 라떼</strong>
+                            <p>₩4200</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <!-- 해피밀 -->
+        <div class="burger-menu tab-pane fade" id="pills-disabled" role="tabpanel" aria-labelledby="pills-disabled-tab" tabindex="0">
+            <ul class="m-List">
+                <li>
+                    <!-- data-bs-toggle="modal"  -->
+                    <a id="happy1" class="m-b">
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/happymeal/happy_Bulgogi_Burger.JPG" alt="해피 불고기 버거">
+                        </div>
+                        <div class="m-name">
+                            <strong>(해피밀)불고기 버거</strong>
+                            <p>₩5500</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id="happy2" class="m-b">
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/happymeal/happy_cheese.JPG" alt="해피 치즈버거">
+                        </div>
+                        <div class="m-name">
+                            <strong>(해피밀)치즈버거</strong>
+                            <p> ₩ 5500</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='happy3' class="m-b"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/happymeal/happy_hamburger.JPG" alt="해피 햄버거">
+                        </div>
+                        <div class="m-name">
+                            <strong>(해피밀)햄버거</strong>
+                            <p>₩5500</p>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a id='happy4' class="m-b"> 
+                        <div class="m-img">
+                            <!-- 이미지 -->
+                            <img src="image/happymeal/happy_mc.JPG" alt="해피 맥너겟">
+                        </div>
+                        <div class="m-name">
+                            <strong>(해피밀)맥너겟</strong>
+                            <p>₩5500</p>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>        
+
+    </div>   
+    <!-- 메뉴 div 끝 -->
+    </div>
+
+
+
+    <div class="ex-box">
+        <div class="ex-header">
+            <h2><i class="fa-solid fa-check">유의사항</i></h2>
+        </div>
+        <div class="ex-box-1">
+            <ul>
+                <li>
+                    매장 별 무료 배달 주문 금액 및 소액주문비는 다르게 운영될 수 있으며, 주문 시 결제 페이지에서 미리 확인 하실 수 있습니다.
+                <li>
+                    맥딜리버리 가격은 매장과 상이합니다.
+                </li>
+                </li>
+                <li>
+                    배달 가능 구역 내에서도 기상조건이나 기타 매장의 사정에 따라 배달 서비스 이용이 어려울 수 있습니다.
+                </li>
+                <li>
+                    주문이 밀리는 시간대에는 배달이 다소 지연될 수 있습니다. 고객님의 너그러운 이해 부탁 드립니다.
+                </li>
+                <li>
+                    메뉴 주문 시 제공 되는 케찹류나 기타 물품의 경우 기본 제공 수량 기준으로 배달하여 드립니다.
+                </li>
+                <li>
+                    맥딜리버리의 운영 시간은 매장과 상이할 수 있습니다.
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 하단 -->
+    <div data-include-path="footer.html"></div>
+
+    <script>
+        // m-a태그들을 변수 burgers에 리스트로 저장
+        var burgers = document.getElementsByClassName('m-a');
+        
+        let burgerInfo = {
+            // 라지세트, 세트, 단품가격
+            'burger1': {name: '맥 크리스피 디럭스 버거', price:[9800, 9200, 7500]} // 맥 크리스피 디럭스
+        ,'burger2': {name: '빅맥', price:[8100, 7500, 5700]} // 빅맥
+        ,'burger3': {name: '맥 스파이시 상하이 버거', price:[8100, 7500, 5700]} // 맥 스파이시 상하이 버거
+        ,'burger4': {name: '1955 버거', price:[9400, 8800, 7500]} // 1955 버거
+        ,'burger5': {name: '더블 불고기 버거', price:[7900, 7300, 5500]} // 더블 불고기 버거
+        };
+
+        // 로컬스토리지를 사용해 브라우저 내에 임시 저장
+        let orderInfoString = window.localStorage.getItem('orderInfo');
+        let orders = orderInfoString ? JSON.parse(orderInfoString) : [];
+
+        let menuID = '';
+
+        // burgurs에 저장되어 있는 각각 요소를 하나씩 burger에 저장,  각각 onclick이벤트 세팅
+        for(var burger of burgers){
+            burger.addEventListener('click', function(){
+                // id에 this(burger1, burger2,...burger5)의 id저장(burger1, burger2,..,burger5)
+                let id = this.id;
+                menuID = id;
+
+                // burgerInfo에서 가격정보를 가져와서 price 변수에 리스트로 저장.
+                let price = burgerInfo[id].price;
+
+                // 모달창
+                $('#lg-set-price')[0].innerHTML = '₩'+price[0];
+                $('#m-set-price')[0].innerHTML = '₩'+price[1];
+                $('#no-set-price')[0].innerHTML = '₩'+price[2];
+
+                $('#menu-modalbox').modal('show')
+            })
+        }
+
+        function menuSel() {
+            // 모달에서 선택한 라지,세트,단품
+            let checkedRadio = $('.sel-radio:checked')[0]; // 선택한 사이즈의 모든 컴포넌트 저장
+            let sizeID = checkedRadio.id; // 저장된 컴포넌트의 아이디를 가져옴(ex) lg-set)
+
+            if(!checkedRadio){
+                alert('옵션을 선택하세요.');
+                return;
+            }
+
+            let menuSize = getSize(sizeID);
+
+            orders.push({
+                menuID: menuID,
+                menuNm: burgerInfo[menuID].name,
+                price: burgerInfo[menuID].price[menuSize],
+                size: sizeID
+            });
+
+            let orderInfostringify = JSON.stringify(orders);
+
+            window.localStorage.setItem('orderInfo', orderInfostringify);
+
+            location.href='cart.html';
+        }
+
+        function getSize(sizeId){
+            switch(sizeId) {
+                case 'lg-set' : return 0;
+                case 'm-set' : return 1;
+                case 'no-set' : return 2;
+            }
+        }
+
+        
+
+
+        
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script/include.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

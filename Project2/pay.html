@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>결제</title>
+    <link rel="stylesheet" href="css/main.css">
+    <!-- <link rel="stylesheet" href="css/menu.css"> -->
+    <link rel="stylesheet" href="css/pay.css">
+    <!-- 부트스트랩 CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <!-- fontawesome 아이콘 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body style="background-color: #F2EBE6">
+    <!-- 헤더 -->
+    <div data-include-path="header.html"></div>
+
+    <!-- 내용 -->
+    <div class="pay-box">
+        <div class="pay-header">
+            <h2>결제하기</h2>
+        </div>
+        <div class="pay-input">
+                <h4><i class="fa-solid fa-cart-shopping">배달정보</i></h4>
+                <div class="pay-basic-box">
+                    <div class="row mb-3">
+                        <label for="inputText" class="col-sm-4 col-form-label">주소</label>
+                        <div class="col-sm-10">
+                        <input type="text" class="form-control col-6" id="addrInput">
+                        </div>
+                    </div>
+                    <div class="row mb-3">
+                        <label for="payPhnum" class="col-sm-2 col-form-label">연락처</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" value="01000000000" id="payPhnum" readonly>
+                        </div>
+                        <label for="payShop" class="col-sm-2 col-form-label">매장</label>
+                        <div class="col-sm-3">
+                            <input type="text" class="form-control" id="" value='가산디지털단지역점'  readonly>
+                        </div>
+                    </div>
+                </div>
+                
+                <h4><i class="fa-sharp fa-solid fa-burger">주문정보</i></h4>
+                <div class="pay-basic-box">
+                    <div class="pay-header row">
+                        <div class="cart-check col-1">
+                            <input type="checkbox">
+                        </div>
+                        <div class="cart-name col-7">
+                            <h4>맥 크리스피 디럭스 버거 라지 세트</h4>
+                            <h4>9800</h4>
+                        </div>
+                        <div class="cart-img col-4">
+                            <img src="image/bugur/McCrispy_Delux.JPG" alt="">
+                        </div>
+                    </div>
+                    <div class="cart-won row">
+                        <div class="cart-count col-2">
+                            <h4>수량</h4>
+                        </div>
+                        <div class="count-btn col-7">
+                            <button>-</button>
+                            <input type="text" class="su-input" id="" value="1" readonly>
+                            <button>+</button>
+                        </div>
+                        <div class="cart-hap-won col-3">
+                            <h4>9800원</h4>
+                        </div>
+                    </div>
+                </div>
+
+                <h4><i class="fa-sharp fa-solid fa-burger">최종 결제금액</i></h4>
+                <div class="pay-basic-box">
+                    <h2>9800원</h2>
+                </div>
+                <div style="text-align:center">
+                    <button type="button" id="f-btn" class="f-btn btn btn-danger p-3" onclick="paybtn()">결제하기</button>
+                </div>
+        </div>
+    </div>
+
+
+
+    <script>
+
+    let addrInfo = window.localStorage.getItem('addrInfo');
+    document.getElementById('addrInput').value = addrInfo;
+
+    function paybtn() {
+        location.href = 'confirm.html'
+    }
+    </script>
+
+
+    <!-- 하단 -->
+    <div data-include-path="footer.html"></div>
+    <!-- 제이쿼리 -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="script/include.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+</body>
+</html>

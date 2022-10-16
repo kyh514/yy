@@ -1,0 +1,112 @@
+@font-face{
+    font-family: '이쁜폰트';
+    src: url(../font/NanumSquareR.woff);
+}
+
+body {
+    margin: 0px;
+    font-family: '이쁜폰트';
+}
+
+div {
+    box-sizing: border-box;
+}
+
+.header {
+    /* border: 1px solid yellow; */
+    border-bottom: 1px solid lightgray;
+    width: 100%;
+    min-width: 800px;
+    height: 130px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.logo-header {
+    /* border : 1px solid red; */
+    float: left;
+    margin: 15px;
+}
+
+.left-header {
+    /* border: 1px solid red; */
+    float: left;
+}
+
+.left-header h1 {
+    position: relative;
+    margin-top: 40px;
+    margin-left: 15px;
+    float: left;
+    font-weight: 900;
+}
+
+/* 상단 메뉴의 주문하기 버튼 */
+/* class가 m-button인 버튼 -> main.css 에 있음*/
+.left-header .m-button {
+    margin-left: 30px;
+    margin-top: 40px;
+}
+
+.right-header {
+    float: right;
+    font-size: 14px;
+}
+
+.right-header ul li {
+    margin-right: 10px;;
+    list-style-type: none; 
+    float: right;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+.right-header ul li a {
+    text-decoration: none;
+    color: gray;
+    font-size: large;
+}
+
+.right-header ul li a:hover {
+    color: #FFBC0D;
+}
+
+.profile {
+    border: 1px solid #FFBC0D;
+    /* background-color: darkgray; */
+    border-radius: 20px;
+    clear: both;
+    margin: 30px;
+    padding: 10px;
+    text-align: center;
+}
+
+.profile-header {
+    /* border: 1px solid blue; */
+    display: flex;
+    font-size: 20px;
+    color: gray;
+}
+
+.profile-header i {
+    font-size: 30px;
+}
+
+.go-mypage a {
+    text-decoration: none;
+    color: gray;
+}
+
+.show-profile {
+    display: none;
+
+}
+
+.show-login{
+    display: block;
+}
+
+.show-logout {
+    display: none;
+    
+}

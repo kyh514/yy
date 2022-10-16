@@ -1,0 +1,32 @@
+.sign-box {
+    /* border: 1px solid green; */
+    width: 70%;
+    min-width: 1500px;
+    height: 55%;
+    padding: 50px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.sign-input {
+    /* border: 1px solid blue; */
+    padding: 20px;
+}
+
+.sign-header h2 {
+    font-family: "양진체";
+    color: red;
+}
+
+.sign-basic-box {
+    /* border: 1px solid black; */
+    border-radius: 20px; 
+    background-color: white;
+    height: 50%;
+    width: 100%;
+    font-size: 18px;
+    /* margin: auto; */
+    margin-bottom: 40px;
+    padding: 70px; 
+}

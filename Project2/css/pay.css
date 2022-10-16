@@ -1,0 +1,93 @@
+
+.pay-box {
+    /* border: 1px solid green; */
+    width: 70%;
+    min-width: 1000px;
+    padding: 50px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.pay-input {
+    /* border: 1px solid blue; */
+    padding: 20px;
+}
+
+.pay-header h2 {
+    font-family: "양진체";
+    color: red;
+}
+
+.pay-basic-box {
+    /* border: 1px solid black; */
+    border-radius: 20px; 
+    background-color: white;
+    height: 50%;
+    width: 100%;
+    font-size: 18px;
+    /* margin: auto; */
+    margin-bottom: 40px;
+    padding: 70px; 
+}
+
+
+.cart-box {
+    /* border: 1px solid blue; */
+    background-color: white;
+    /* border-radius: 20px; */
+    width: 70%;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 50px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+}
+
+.cart-name h4 {
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.cart-header {
+    /* border: 1px solid #B32025; */
+    border-bottom: 1px dashed lightgray;
+    position: relative;
+    right: 20px;
+}
+
+.cart-won {
+    /* border: 1px solid blueviolet; */
+    padding-top: 20px;
+}
+
+.cart-won h4 {
+    font-weight: 800;
+}
+
+.cart-img img {
+    width: 150px;
+}
+
+.su-input {
+    width: 50px;
+}
+
+.count-btn {
+    display: flex;
+}
+
+.count-btn button {
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.count-btn input {
+    border: none;
+    text-align: center;
+}

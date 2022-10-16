@@ -1,0 +1,105 @@
+
+.cart-allbox {
+    /* border: 1px solid #FFBC0D; */
+    border-radius: 40px;
+    width: 70%;
+    min-width: 850px;
+    margin: 30px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 40px;
+}
+
+.cart-title {
+    /* border: 1px solid salmon; */
+    padding: 5px;
+    border-bottom: 3px solid #B32025;
+}
+
+
+.cart-title h2 {
+    font-family: "양진체";
+    width: 120px;
+}
+
+.cart-box {
+    /* border: 1px solid blue; */
+    background-color: white;
+    /* border-radius: 20px; */
+    width: 70%;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    padding: 50px;
+    padding-right: 0px;
+    padding-bottom: 10px;
+}
+
+.cart-name h4 {
+    font-weight: 800;
+    margin-bottom: 40px;
+}
+
+.cart-header {
+    /* border: 1px solid #B32025; */
+    border-bottom: 1px dashed lightgray;
+    position: relative;
+    right: 20px;
+}
+
+.cart-won {
+    padding-top: 20px;
+}
+
+.cart-won h4 {
+    font-weight: 800;
+}
+
+.cart-img img {
+    width: 150px;
+}
+
+.count-btn {
+    display: flex;
+}
+
+.count-btn button {
+    border: none;
+    border-radius: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.count-btn input {
+    border: none;
+    text-align: center;
+}
+
+.cart-count-1 {
+    width: 50px;
+}
+
+
+.cart-hap {
+    /* border: 1px solid blue; */
+    border-bottom: 3px solid #B32025;;
+    background-color: white;
+    width: 100%;
+    padding: 20px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+}
+
+.cart-hap h2{
+    font-family: "양진체";
+}
+
+.cart-btn-box {
+    text-align: right;
+}

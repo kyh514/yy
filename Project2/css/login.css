@@ -1,0 +1,64 @@
+
+h2 {
+    font-family: '양진체';
+    color: #DB0007;
+}
+
+
+/* 전체 박스 */
+.L-container {
+    /* border: 1px solid red; */
+    width: 100%;
+    /* min-width: 600px; */
+    height: 700px;
+    /* margin: auto;  */
+    margin-top : 50px;
+    text-align: center;
+}
+
+.L-container div {
+    margin: auto;
+}
+
+
+/* 회원 전체 박스 */
+.L-member-container {
+    border: 2px solid rgba(204, 201, 201, 0.336);
+    border-radius: 30px;
+    width: 40%;
+    min-width: 550px;
+    height: 40%;
+    /* margin: 20px; */
+    padding-left: 100px;
+    padding-right: 100px;
+    padding-top: 30px;
+}
+
+
+.L-member-container form {
+    /* border: 1px solid salmon; */
+    margin: auto;
+    margin-top: 40px;
+    width: 90%;
+}
+
+/* 비회원 전체 박스 */
+.L-nomember-container {
+    /* border: 1px solid green; */
+    background-color: rgba(204, 201, 201, 0.103);
+    width: 100%;
+    height: 55%;
+    padding: 30px;
+}
+
+.L-nomember-container div {
+    /* border: 1px solid black; */
+    border-radius: 20px;
+    background-color: white;
+    height: 50%;
+    width: 70%;
+    font-size: 18px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding: 70px;
+}

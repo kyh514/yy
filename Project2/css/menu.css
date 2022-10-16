@@ -1,0 +1,191 @@
+/* 모달창 */
+.m-sel-ul {
+    /* border: 1px solid red; */
+    border-radius: 30px;
+    list-style-type: none; 
+    padding: 5px;
+    display: flex;
+}
+
+.m-sel-ul li {
+    border: 1px solid rgba(211, 211, 211, 0.651);
+    border-radius: 15px;
+    width: 100%;
+    padding: 10px;
+    margin: 5px;
+}
+
+.m-sel-ul li:hover {
+    cursor: pointer;
+    border: 1px solid #FFBC0D;
+}
+
+.m-sel-ul li img{
+    display: inline-block;
+    width: 100%;
+}
+
+.sel-radio s{
+    position: absolute;
+	opacity: 0;
+	width: 0;
+}
+
+
+
+.menu-allbox {
+    /* border: 1px solid #FFBC0D; */
+    border-radius: 40px;
+    width: 70%;
+    min-width: 850px;
+    margin: 30px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    padding: 40px;
+}
+
+
+
+/* 메뉴 종류(버거&세트 스낵&사이드 음료 디저트 해피밀) */
+.menu-header {
+    /* border: 1px solid salmon; */
+    padding: 5px;
+    display: flex;
+    border-bottom: 3px solid #B32025;
+}
+
+.menu-header h2 {
+    font-family: "양진체";
+    width: 120px;
+}
+
+
+.menu-item {
+    font-size: 20px;
+    /* border: 1px solid rebeccapurple; */
+    padding: 5px;
+
+}
+
+.menu-item ul li {
+    list-style-type: none; 
+    float: right;
+    padding: 5px;
+    margin-right: 40px;
+}
+
+.menu-item button {
+    color:black;
+}
+
+
+/* 메뉴 나열*/
+.burger-menu {
+    /* border: 1px solid blue; */
+}
+
+.burger-menu ul {
+    /* border: 1px solid #B32025; */
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow: auto;
+    margin-top: 10px;
+}
+
+.burger-menu ul li {
+    /* border: 1px solid #FFBC0D; */
+    border-radius: 10px;
+    background-color: #F5F5F5;
+    width: 22%;
+    list-style-type: none;
+    padding: 15px;
+    margin: 10px; 
+}
+
+.m-name {
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    text-align: center;
+}
+
+.m-img img {
+    width: 100%;
+}
+
+.m-a {
+    text-decoration: none;
+    color: black;
+}
+
+.m-a:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.m-b {
+    text-decoration: none;
+    color: black;
+}
+
+.m-b:hover {
+    color: black;
+    text-decoration: none;
+}
+
+.burger-menu ul li:hover {
+    border: 1px solid #FFBC0D;
+    background-color: white;
+}
+
+.ex-box {
+    /* border: 1px solid red; */
+    display: block;
+    background-color: rgba(211, 211, 211, 0.158);
+    padding: 15px;
+}
+
+
+.ex-header {
+    padding: 5px;
+    border-bottom: 3px solid #B32025;
+    /* border: 1px solid #FFBC0D; */
+    width: 60%;
+    min-width: 750px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 15px;
+}
+
+.ex-header h2{
+    font-family: "양진체";
+}
+
+
+.ex-box-1 {
+    /* border: 1px solid blue; */
+    width: 60%;
+    min-width: 750px;
+    display: block;
+    margin-left: auto; 
+    margin-right: auto;
+    margin-top: 10px;
+    padding: 10px;
+    display: block;
+}
+
+
+.ex-box-1 ul li {
+    /* list-style-type: none; */
+    color: gray;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.ex-box-1 ul li::marker {
+    color: #FFBC0D;
+}
